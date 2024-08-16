@@ -6,7 +6,7 @@ function setup(){
     console.log('p5.js er loaded')
     pages = selectAll('.page')
     // nu kan man se at pages er blevet til en liste med alle class = page ting
-    //console.log(pages.length)
+    console.log(pages.length)
 
 }
 
