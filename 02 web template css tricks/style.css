@@ -27,6 +27,26 @@
     display:grid;
     place-items:center;
     border:1px solid white; 
+    position: relative;
+
+}
+
+.absolute{
+    position:absolute;
+    top:2rem;
+    right:2rem;
+    font-size: 2rem;
+    color: whitesmoke;
+
+}
+.fixed{
+    position: fixed;
+    top: 2rem;
+    left:2rem;
+    color:lightgoldenrodyellow;
+    font-size: 4rem;
+    font-variant: small-caps;
+    text-shadow: 4px 4px 4px black;
 
 }
 
