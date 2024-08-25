@@ -33,6 +33,9 @@ header#leftmenu{
     border-bottom: 1px solid black;
     border-right: 1px solid black;
     transition: 0.3s all ease-in-out;
+    color: lightblue;
+    background-color: lightyellow;
+
 
 }
 
@@ -79,6 +82,30 @@ header#leftmenu{
 
 }
 
+.box2{
+    width:40%;
+    height:100%;
+    top:-30vh;
+    left:20vw;
+    display:grid;
+    place-items:center;
+    border:1px solid white; 
+    position: relative;
+
+}
+
+.box3{
+    width:80%;
+    height:80%;
+    top:-30vh;
+    left:-15vw;
+    display:grid;
+    place-items:center;
+    border:1px solid white; 
+    position: relative;
+
+}
+
 #firstimage{
     background-position: center center;
     top: -15vh;
@@ -87,6 +114,20 @@ header#leftmenu{
     background-size: cover;
     width:40vw;
     height: 50vh;
+    
+
+}
+
+#secondimage{
+    position: relative;
+    background-position: center center;
+    top: 10vh;
+    left: -20vw;
+    background-image: url(./assets/second\ 2.jpg);
+    width:30vw;
+    height: 30vh;
+    background-size: cover;
+    background-repeat: no-repeat;
     
 
 }
@@ -114,7 +155,8 @@ header#leftmenu{
 
 h1{
     font-family: Raleway;
-    color: hotpink;
+    color: darkblue;
+    text-shadow: 4px 4px 4px black;
 }
 
 p{
