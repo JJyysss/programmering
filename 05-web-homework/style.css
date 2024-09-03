@@ -101,39 +101,7 @@ header.hidden:hover .menuitem{
     transition: 0.3s all ease-in-out ;
 }
 
-.box{
-    width:80%;
-    height:80%;
-    display:grid;
-    place-items:center;
-    border:1px solid white; 
-    position: relative;
 
-}
-
-.box2{
-    width:40vw;
-    height:80vh;
-    top:-40vh;
-    left:20vw;
-    display:grid;
-    place-items:center;
-    
-    position: relative;
-
-}
-
-.box3{
-    width:80vw;
-    height:40vh;
-    top:-60vh;
-    left:0vw;
-    display:grid;
-    place-items:center;
-  
-    position: relative;
-
-}
 
 
 
