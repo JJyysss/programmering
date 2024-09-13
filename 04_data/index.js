@@ -1,4 +1,4 @@
-let currentPage = 1
+let currentPage = 2
 
 let pages //array med alle elementer med class = page 
 let menuItems //array med alle menupunkterne  
@@ -35,8 +35,53 @@ function setupMenuStructure(){
 
 }
 
+function pageOne(){
+    console.log('side 1 funktionen kaldes')
+}
+
 function pageTwo(){
 
+    //Først beder vi fetch hente den lokale fil
+    fetch('./mydata.json')
+    
+
+    //så venter vi på serverens promise, der kommer tilbage med .then()
+    .then(
+        function(response){
+            //lad os tjekke om serverens response er okay
+            console.log(response)
+            //og hvis det er det, beder vi serveren om at give os json resultatet 
+            return response.json()
+        }
+    )
+    //og når DET så kommer tilbage 
+    .then(
+        function (data){
+            //vi har nu en random drink
+            //data.Name, så ploter kun Name pikachu
+            console.log(data)
+
+            //p5 funktion der laver en ny div
+            let newDiv =createElement('div')
+            let newHeader = createElement('h1', data.Name)
+            let newP = createElement('p', data.Description)
+            newDiv.child(newP)
+            newDiv.child(newHeader)
+      
+            select('#localData').child(newDiv)
+         
+            
+
+
+
+
+
+            
+        }
+    )
+}
+
+function pageThree(){
     //Først kalder vi server API'ets endpoint
     fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
 
@@ -56,9 +101,6 @@ function pageTwo(){
             console.log(data)
         }
     )
-}
-
-function pageThree(){
 }
 
 function pageFour(){
@@ -82,12 +124,23 @@ function shiftPage(num){
     select("#page" + currentPage).addClass('visible')
     select("#menu" + currentPage).addClass('active')
 
+
+
+    if(currentPage == 1) {
+        pageOne()
+    }
     if(currentPage == 2) {
         pageTwo()
     }
-    if(currentPage == 3) {
+
+    if(currentPage == 2) {
         pageThree()
     }
+
+    if(currentPage == 4) {
+        pageFour()
+    }
+    
 }
 
 function keyPressed(){
