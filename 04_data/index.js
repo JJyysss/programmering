@@ -8,10 +8,13 @@ function setup(){
 }
 
 function setupMenuStructure(){
+    // select alle class page
     pages = selectAll('.page')
     menuItems = selectAll('.menuitem')
 
     //menu items skal reagere ved at skifte side
+    // lave et variable m, hver gang loop kører, er m lige med 1 indtil der ikke mere. 
+    // m.mousepressed, tyrk på div, mousePressed
     for( m of menuItems ){
         m.mousePressed( function(e) {
             //e.target er selve html div'en 
