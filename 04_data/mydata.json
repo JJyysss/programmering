@@ -1,6 +1,6 @@
 {
     "Name":"Pikachu Pikachu",
-    "Description":"dette er data fra lokale fil mydata.json. De ligger i Jaavscrpit Object Notation (Json), og er hentet med funktionen fetch ",
+    "Description":"Hej, dette er data fra lokale fil mydata.json. De ligger i Jaavscrpit Object Notation (JSON), og er hentet med funktionen fetch ",
     "FormerHaircolors":["purple", "black","orange"],
     "Happy":true,
     "Image":"./assets/pikachu.webp"

@@ -63,11 +63,32 @@ function pageTwo(){
 
             //p5 funktion der laver en ny div
             let newDiv =createElement('div')
+            // så lave en overskrift
             let newHeader = createElement('h1', data.Name)
+            //så lave vi et p-element
             let newP = createElement('p', data.Description)
-            newDiv.child(newP)
+            // nu laver jeg en underoverskrift
+            let hairHeader = createElement('h3','Tidligere hårfarver')
+            // nu skal jeg løbe et array igennem fra JSON
+            let hairlist = createElement('ul')
+            // for loop
+            for( color of data.FormerHaircolors){
+                console.log(color)
+                let listItem = createElement('li', color)
+                hairlist.child(listItem)
+            }
+
+
+            // til sidst lægger vi de nye elementer ind i den div vi oprettede
             newDiv.child(newHeader)
-      
+            newDiv.child(newP)
+            newDiv.child(hairHeader)
+            newDiv.child(hairlist)
+            //tag fat i html element med id = localData
+            //tøm det
+          
+            select('#localData').html('')
+            // og sæt data ind i det
             select('#localData').child(newDiv)
          
             
