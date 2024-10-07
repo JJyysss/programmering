@@ -67,23 +67,27 @@ header{
 
 .post h2{
     color:whitesmoke;
-    font-size:1.5rem;
+    text-shadow: 1px 1px 2px black;
+    font-size:2rem;
     font-weight:bold;
     /* Styling af overskriften i hvert indlæg */
 }
 
-.post .author{
+.post .score{
     position:absolute;
     right:1rem;
     top:1rem;
     color:dodgerblue;
     width:80%;
     padding-right:.8rem;
-    background-color:black;
+    background-color:rgb(105,105,105,0.5);
     display:grid;
     text-align: right;
     border-radius:1rem;
     /* Positionerer forfatterens navn øverst til højre i indlægget:
        - 'position:absolute' placerer elementet i forhold til .post.
        - 'display:grid' bruges her til nemt at centrere eller justere indholdet inden i forfatterfeltet. */
+}
+p2{
+    font-size:3rem;
 }

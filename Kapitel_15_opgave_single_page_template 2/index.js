@@ -57,7 +57,7 @@ function createPost(post){
     let container = createElement('div').addClass('post');
     // Opretter et nyt 'div' element og tilføjer klassen 'post' for styling.
 
-    container.style('background', `url(${post.images.jpg.image_url})`);
+    container.style('background-image', `url(${post.images.jpg.image_url})`);
     // Sætter baggrundsbilledet til indlæggets thumbnail.
 
     let title = createElement('h2', post.title_english);
