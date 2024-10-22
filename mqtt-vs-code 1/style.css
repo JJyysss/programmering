@@ -16,30 +16,31 @@ main{
     width:20vw;
     height:20vw;
     border:1px solid black;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    display:grid;
+    grid-template-rows: 1fr 3fr;
     padding:4rem;
 }
 
-.m5 header{ 
-   font-size:3rem;
+.m5 header{
+    transition:all 1s ease-in-out;
+    font-size:3rem;
 }
 
 .m5 .status{
     font-size:2rem;
     font-weight:bold;
-    padding: 2rem;
-    width:8rem ;
-    height:4rem ;
-    place-items: center;
-    background: gray;
+    width:8rem;
+    height:4rem;
+    display:grid;
+    place-items:center;
+    background:gray;
     border-radius: 2rem;
-    color: white;
+    color:white;
     transition: all .5s ease-in-out;
 }
 
 .m5 .status.true{
-    background: green;
+    background:green;
     height:8rem;
-    border-radius: 50%;
+    border-radius:50%;
 }
