@@ -23,6 +23,9 @@ class Clock {
         this.alarmSeconds = null
         this.alarmRinging = false
 
+        // vil alarm have en lyd, hente lyd fra soundfil
+        this.alarmSound = new Audio('soundfil/alarmlyd.mp3');
+
         //styles 
         this.div.style(
             `
@@ -35,6 +38,7 @@ class Clock {
             border-radius:2rem;
             place-items:center;
             font-size:1.5rem;
+            cursor: pointer; /* bliver clock clickable */
             `
         )
 
@@ -50,6 +54,12 @@ class Clock {
                 default:
                     this.div.style('background','rgba(0,0,0,0)')
          }
+         // når mousePressed og skal alarm stop
+         this.div.mousePressed(() => {
+            if (this.alarmRinging) {
+                this.stopAlarm();
+            }
+        });
 
         
     }
@@ -86,5 +96,18 @@ class Clock {
         showAlarm(){
             this.div.style('background', 'red')
             this.alarmRinging = true
+            // spil lyd
+            this.alarmSound.play();
+    }
+    stopAlarm(){
+        this.alarmRinging = false;
+        this.alarmSet = false;
+        // stop lyd
+        this.alarmSound.pause();  
+        // skrift farve tilbage til transparent
+        this.div.style('background', 'rgba(0,0,0,0)');
+        // Reset sound to start from the beginning
+        this.alarmSound.currentTime = 0;  
+        console.log('Alarm stopped');
     }
 }
