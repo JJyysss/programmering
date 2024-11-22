@@ -23,8 +23,6 @@ class Clock {
         this.alarmSeconds = null
         this.alarmRinging = false
 
-        
-
         //styles 
         this.div.style(
             `
