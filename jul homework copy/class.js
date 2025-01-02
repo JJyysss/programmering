@@ -55,7 +55,7 @@ class Being {
       if (character instanceof Alien) {
         console.log(`Alien speaks: ${character.alienSpeak()}`);
         const alienMessage = character.alienSpeak();
-        alienSpeakElement.html(`Alien speaks: "${alienMessage}"`);
+        alienSpeakElement.html(`${character}speaks: "${alienMessage}"`);
 
         
       } else {

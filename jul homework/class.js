@@ -5,7 +5,7 @@ class Being {
     }
   
     introduce() {
-      return `Hello it's ${this.name}, a ${this.age} year old.`;
+      return `Hello it's ${this.name}, ${this.age} year old.`;
     }
   }
   
@@ -19,9 +19,9 @@ class Being {
       return `${super.introduce()} And I am an Alien from the planet ${this.planet}.`;
     }
   
-    alienSpeak() {
-      const phrases = ["Blip blop!", "Zorg narg!", "Grzzt blorp!"];
-      return phrases[Math.floor(Math.random() * phrases.length)];
+    alienTalk() {
+      const sentences = ["PI PIKACHU :o", "WRGZHS WRZSJ :)", "RYMZDZSGHNJM .)", "pwijbv wepbvna", "WIRIBVEF WERBAW"];
+      return sentences[Math.floor(Math.random() * sentences.length)];
     }
   }
   
@@ -36,30 +36,30 @@ class Being {
     }
   }
   
-  function createCard(character, container, introElement, alienSpeakElement) {
+  function createCard(character, container, introElement,  alienTalkElement) {
     const card = document.createElement('div');
+    // navn af kort skal være Alien, ellers skal have human navne. 
     card.className = `card ${character instanceof Alien ? 'alien' : 'human'}`;
     card.textContent = character.name;
   
     card.addEventListener('click', () => {
       const message = character.introduce();
       console.log(message);
-     // alert(message);
-
+      // skrive introduce i html
       introElement.textContent = message;
 
       
       
   
-      // Bonus: Hvis det er en Alien, vis aliensprog
+      //Alien skal sige aliensprog
       if (character instanceof Alien) {
-        console.log(`Alien speaks: ${character.alienSpeak()}`);
-        const alienMessage = character.alienSpeak();
-        alienSpeakElement.textContent = `Alien speaks: "${alienMessage}"`;
+        console.log(`Alien (${character.name}) talks: ${character.alienTalk()}`);
+        const alienMessage = character.alienTalk();
+        alienTalkElement.textContent = `${character.name} talks: "${alienMessage}"`;
 
         
       } else {
-        alienSpeakElement.textContent = ''; // Tøm aliensprog-sektionen for mennesker
+        alienTalkElement.textContent = ''; 
       }
       
     });
@@ -67,14 +67,4 @@ class Being {
     container.appendChild(card);
   }
   
-  function setup() {
-    const container = document.getElementById('class-container');
-    const introElement = document.getElementById('intro');
-    const alienSpeakElement = document.getElementById('alien-speak');
-  
-  
-    characters.forEach(character => createCard(character, container, introElement,alienSpeakElement ));
-  }
-  
-  setup();
   
