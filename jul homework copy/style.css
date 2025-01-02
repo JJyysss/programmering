@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.page{
+    position:fixed;
+    top:0;
+    left:-100vw;
+    width:100vw;
+    height: 100vh;
+    overflow:hidden;
+    display:grid;
+    place-items:center;
+    transition: 0.3s 0.3s all ease-in-out;
+}
+
+.time{
+    font-family:arial;
+    font-size:6rem;
+    height:11rem;
+    width:11rem;
+    border:1px dotted hotpink;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+}
+
+.visible{
+    left:0;
+    transition: 0.3s all ease-in-out;
+}
+
+#page1{
+    background-color: lightskyblue;
+}
+
+#page2{
+    background-color: lightgreen;
+}
+#page3{
+    background-color: lightcyan;
+}
+#page4{
+    background-color: lightseagreen;
+}
+
+h1{
+    font-family: Raleway;
+    color:hotpink;
+}
+
+#class-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .card {
+    width: 150px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  .human {
+
+    background-color: blue;
+    background-image:url();
+  }
+  .alien {
+    background-color: green;
+  }
+
+  #intro {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  #alien-speak {
+    margin-top: 10px;
+    font-size: 16px;
+    font-style: italic;
+    color: darkgreen;
+  }
